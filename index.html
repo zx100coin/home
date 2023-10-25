@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head><title>Il Sito dell'Intelligenza Artificiale</title>
+<style>
+body {
+background-color: black;
+color: white;
+font-family: "Arial", sans-serif;
+font-size: 24px;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+overflow: hidden;
+}
+.typewriter {
+overflow: hidden;
+white-space: nowrap;
+animation: typing 5s steps(40);
+animation-fill-mode: forwards; /* Il testo rimane fermo alla fine dell'animazione */
+}
+@keyframes typing {
+from {
+width: 0;
+}
+to {
+width: 100%;
+}
+}
+</style>
+</head><body>
+<div class="typewriter"><div style="text-align: center;">
+</div><p style="text-align: center;">Ciao, hai aperto lo scrigno della ricchezza.</p>
+</div>
+<script>
+$(document).ready(function() {
+var greetingText = $("#greeting").text();
+var visitorLanguage = navigator.language || navigator.userLanguage;
+if (visitorLanguage.startsWith("en")) {
+$("#greeting").translate('en', greetingText);
+} else if (visitorLanguage.startsWith("es")) {
+$("#greeting").translate('es', greetingText);
+} else if (visitorLanguage.startsWith("zh")) {
+$("#greeting").translate('zh-CN', greetingText);
+}
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-translate/1.4.0/jquery.translate.min.js"></script>
+</body></html>
